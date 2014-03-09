@@ -36,8 +36,13 @@ public class MainActivity extends Activity
 		view[4].setBackgroundColor(Color.YELLOW);
 		
 		spinner[0]=(Spinner)findViewById(R.id.spinner1);
+		spinner[1]=(Spinner)findViewById(R.id.spinner2);
+		spinner[2]=(Spinner)findViewById(R.id.spinner3);
+		spinner[3]=(Spinner)findViewById(R.id.spinner4);
+		spinner[4]=(Spinner)findViewById(R.id.spinner5);
 		arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-		spinner[0].setAdapter(arrayAdapter);
+		for(int i=0;i<spinner.length;i++)
+			spinner[i].setAdapter(arrayAdapter);
 	
 	}
 
