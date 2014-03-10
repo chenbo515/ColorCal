@@ -15,14 +15,24 @@ public class MainActivity extends Activity
 
 	View[] view=new View[5];
 	Spinner[] spinner=new Spinner[5];
-	String[] ringColorsStrings={"RED","BLUE","GERY","YELLOW"};
-	ArrayAdapter<String> arrayAdapter;
+	String[] valueString={"Black","Brown","Red","Orange","Yellow","Green","Blue","Purple","Grey","White"};
+	String[] multiplyStrings={"Black","Brown","Red","Orange","Yellow","Green","Blue","Purple","Grey","White","Golden","Silver"};
+	String[] accurateStrings={"Brown","Red","Golden","None"};
+	ArrayAdapter<String> valueStringAdapter,multiplyStringAdapter,accurateStringAdapter;
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
 	{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		arrayAdapter=new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_spinner_dropdown_item, ringColorsStrings);
+		valueStringAdapter=new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_spinner_dropdown_item, valueString);
+		valueStringAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		
+		multiplyStringAdapter=new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_spinner_dropdown_item,multiplyStrings);
+		multiplyStringAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		
+		accurateStringAdapter=new ArrayAdapter<String>(getApplicationContext(),  android.R.layout.simple_spinner_dropdown_item,accurateStrings);
+		accurateStringAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		
 		view[0]=findViewById(R.id.view1);
 		view[1]=findViewById(R.id.view2);
 		view[2]=findViewById(R.id.view3);
@@ -40,9 +50,13 @@ public class MainActivity extends Activity
 		spinner[2]=(Spinner)findViewById(R.id.spinner3);
 		spinner[3]=(Spinner)findViewById(R.id.spinner4);
 		spinner[4]=(Spinner)findViewById(R.id.spinner5);
-		arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-		for(int i=0;i<spinner.length;i++)
-			spinner[i].setAdapter(arrayAdapter);
+		
+		
+		spinner[0].setAdapter(valueStringAdapter);
+		spinner[1].setAdapter(valueStringAdapter);
+		spinner[2].setAdapter(valueStringAdapter);
+		spinner[3].setAdapter(multiplyStringAdapter);
+		spinner[4].setAdapter(accurateStringAdapter);
 	
 	}
 
