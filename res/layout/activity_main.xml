@@ -85,13 +85,35 @@
         
 
     </LinearLayout>
+    <RadioGroup  
+        android:id="@+id/radiogroup1"  
+        android:layout_width="match_parent"  
+        android:layout_height="wrap_content"  
+        android:orientation="horizontal"  
+         android:layout_margin="10px"
+    >  
+
+        <RadioButton  
+            android:id="@+id/radiobutton1"  
+            android:layout_width="wrap_content"  
+            android:layout_height="wrap_content"  
+            android:text="4 Ring Resistor"  
+            android:checked="true"
+        />  
+        <RadioButton  
+            android:id="@+id/radiobutton2"  
+            android:layout_width="wrap_content"  
+            android:layout_height="wrap_content"  
+            android:text="5 Ring Resistor"  
+        />  
+      
+    </RadioGroup>  
 
     <TextView
         android:id="@+id/textView1"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="5"
-        android:text="TextView" 
-        android:layout_margin="10px"/>
+        android:layout_height="336dp"
+        android:layout_margin="10px"
+        android:text="TextView" />
 
 </LinearLayout>
