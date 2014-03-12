@@ -97,14 +97,14 @@
             android:id="@+id/radiobutton1"  
             android:layout_width="wrap_content"  
             android:layout_height="wrap_content"  
-            android:text="4 Ring Resistor"  
+            android:text="4 rings "  
             android:checked="true"
         />  
         <RadioButton  
             android:id="@+id/radiobutton2"  
             android:layout_width="wrap_content"  
             android:layout_height="wrap_content"  
-            android:text="5 Ring Resistor"  
+            android:text="5 rings "  
         />  
       
     </RadioGroup>  

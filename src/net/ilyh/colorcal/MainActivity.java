@@ -161,6 +161,7 @@ public class MainActivity extends Activity
 					spinner[2].setVisibility(View.VISIBLE);
 					is4RingMode=false;
 				}
+				refreshUI();
 			}
 		});
 		
